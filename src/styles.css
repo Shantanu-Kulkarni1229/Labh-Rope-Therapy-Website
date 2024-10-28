@@ -1,0 +1,384 @@
+
+    /* Base styles */
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #0A0505;
+        color: #FFFFFF;
+        min-height: 100vh;
+    }
+
+    /* Navbar styles */
+    .nav-fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background-color: rgba(10, 5, 5, 0.95) !important;
+        backdrop-filter: blur(8px);
+        border-bottom: 2px solid #FFD700;
+    }
+
+    /* Section styles */
+    .section {
+        position: relative;
+        z-index: 1;
+        min-height: 100vh;
+        padding: 6rem 0;
+        background-color: #0A0505;
+    }
+
+    /* Text styles */
+    .highlight-text {
+        color: #FFD700;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    }
+
+    /* Card styles */
+    .service-card, .testimonial-card {
+        background-color: rgba(10, 5, 5, 0.98);
+        border: 2px solid #FFD700;
+        transition: all 0.4s ease;
+    }
+
+    .service-card:hover, .testimonial-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+    }
+
+    /* Button styles */
+    .vintage-border {
+        border: 2px solid #FFD700;
+        background-color: transparent;
+        color: #FFD700;
+        transition: all 0.3s ease;
+    }
+
+    /* .vintage-border:hover {
+        background-color: #FFD700;
+        color: #0A0505;
+    } */
+
+    /* Navigation links */
+    .nav-link {
+        color: #FFFFFF;
+        transition: color 0.3s ease;
+    }
+
+    .nav-link:hover {
+        color: #FFD700;
+    }
+    .typewriter {
+        border-right: 2px solid #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: blink 0.75s step-end infinite;
+    }
+    
+    @keyframes blink {
+        from { border-color: transparent; }
+        to { border-color: #fff; }
+    }
+    
+:root {
+    /* Enhanced color palette for better contrast */
+    --primary-color: #0A0505;  /* Darker background */
+    --accent-color: #FFD700;   /* Brighter gold */
+    --text-light: #FFFFFF;     /* Pure white for maximum contrast */
+    --text-muted: #B8B8B8;    /* Lighter muted text */
+    --card-bg: rgba(10, 5, 5, 0.98);
+    --hover-color: #FFF000;   /* Brighter yellow for hover */
+    --secondary-accent: #E6B800; /* Darker gold for contrast */
+    --highlight-bg: rgba(255, 215, 0, 0.1); /* Subtle gold background */
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+/* Enhanced section styling */
+.section {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    background-color: rgba(10, 5, 5, 0.97);
+    backdrop-filter: blur(8px);
+    padding: 6rem 0;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+/* Enhanced text styling */
+.highlight-text {
+    color: var(--accent-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Enhanced card styling */
+.service-card, .testimonial-card {
+    background: var(--card-bg);
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover, .testimonial-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+    border-color: var(--hover-color);
+}
+
+/* Enhanced button styling */
+.vintage-border {
+    border: 2px solid var(--accent-color);
+    background: rgba(10, 5, 5, 0.95);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.vintage-border:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 215, 0, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.vintage-border:hover:before {
+    left: 100%;
+}
+
+/* .vintage-border:hover {
+    background: var(--accent-color);
+    color: var(--primary-color) !important;
+    text-shadow: none;
+    transform: translateY(-2px);
+} */
+
+/* Enhanced form styling */
+input, textarea {
+    background-color: rgba(10, 5, 5, 0.9) !important;
+    border: 2px solid var(--accent-color) !important;
+    color: var(--text-light) !important;
+    transition: all 0.3s ease;
+    padding: 12px !important;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    background-color: rgba(10, 5, 5, 0.98) !important;
+    transform: translateY(-2px);
+}
+
+/* Enhanced navigation */
+nav {
+    background: rgba(10, 5, 5, 0.98) !important;
+    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--accent-color);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+    position: relative;
+    padding-bottom: 2px;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Enhanced gallery styling */
+.gallery-image {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--accent-color);
+}
+
+.gallery-image img {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-image:hover img {
+    transform: scale(1.1) rotate(2deg);
+}
+
+/* Enhanced scroll indicator */
+.scroll-indicator {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.scroll-dot {
+    width: 12px;
+    height: 12px;
+    margin: 10px 0;
+    border-radius: 50%;
+    border: 2px solid var(--accent-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+}
+
+.scroll-dot.active {
+    background: var(--accent-color);
+    transform: scale(1.3);
+}
+
+.scroll-dot:hover:not(.active) {
+    transform: scale(1.2);
+    background: rgba(255, 215, 0, 0.3);
+}
+
+/* New animated background */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bg-particle {
+    position: absolute;
+    background: var(--accent-color);
+    border-radius: 50%;
+    opacity: 0.1;
+    animation: float 20s infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0); }
+    25% { transform: translate(100px, 100px); }
+    50% { transform: translate(0, 200px); }
+    75% { transform: translate(-100px, 100px); }
+}
+
+/* New loading animation */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader-circle {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--accent-color);
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.intro-overlay {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* background: #000; Added black background */
+}
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.youtube-iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* Optimal aspect ratio handling */
+@media (min-aspect-ratio: 16/9) {
+    .youtube-iframe {
+        height: 56.25vw;
+        min-height: 100vh;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .youtube-iframe {
+        width: 177.78vh;
+        min-width: 100vw;
+    }
+}
+.testimonial-card + .testimonial-card {
+    margin-left: 20px;
+  }
+
+  /* Button styles for scroll arrows */
+  #left-scroll, #right-scroll {
+    background-color: #f1f1f1;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 10px;
+    transition: background-color 0.3s;
+  }
+
+  #left-scroll:hover, #right-scroll:hover {
+    background-color: #e0e0e0;
+  }
+  .benefit-card {
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
